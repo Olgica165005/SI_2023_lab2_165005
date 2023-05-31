@@ -6,6 +6,8 @@
 
 ![ControlFlowGraph](https://github.com/Olgica165005/SI_2023_lab2_165005/assets/128933727/2bc6cc95-82d8-4eab-bac7-f3ca664f871b)
 
+&ast; Во src/main/java/SILab2.java се означени линиите код со соодветниот број на јазел.
+
 ### Цикломатска комплексност
 
 Цикломатската комплексност на овој код е 11.

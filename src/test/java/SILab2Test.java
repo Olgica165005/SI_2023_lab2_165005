@@ -28,4 +28,22 @@ public class SILab2Test {
         assertFalse(SILab2.function(new User("username", "my password", "mail"), new ArrayList<>()));
     }
 
+    @Test
+    public void multipleCondition() {
+        // Test case 1: user is null (TXX)
+        RuntimeException ex1 = assertThrows(RuntimeException.class, () -> SILab2.function(null, new ArrayList<>()));
+        assertTrue(ex1.getMessage().contains("Mandatory information missing!"));
+
+        // Test case 2: password is null (FTX)
+        RuntimeException ex2 = assertThrows(RuntimeException.class, () -> SILab2.function(new User("username", "email@mail.com", null), new ArrayList<>()));
+        assertTrue(ex2.getMessage().contains("Mandatory information missing!"));
+
+        // Test case 3: password is null (FFT)
+        RuntimeException ex3 = assertThrows(RuntimeException.class, () -> SILab2.function(new User("username", null, "password"), new ArrayList<>()));
+        assertTrue(ex3.getMessage().contains("Mandatory information missing!"));
+
+        // Test case 4: all needed information is present
+        assertDoesNotThrow(() -> SILab2.function(new User("username", "password", "email@mail.com"), new ArrayList<>()), "Mandatory information missing!");
+    }
+
 }

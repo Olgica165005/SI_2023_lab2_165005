@@ -18,6 +18,7 @@
 
 ```
 user = null
+users = []
 ```
 
 - Ја покрива патеката 1,2 - 3 - 25
@@ -35,6 +36,7 @@ users = [ { username: "email@mail.com", email: "email@mail.com", password: "some
 
 ```
 user = { username: "username", email: "mail", password: "weak" }
+users = []
 ```
 
 - Ја покрива патеката 1,2 - 4 - 6 - 7 - 15,16,17 - 18 - 19 - 25
@@ -52,6 +54,7 @@ users = [ { username: "differentUsername", email: "differentMail@mail.com", pass
 
 ```
 user = { username: "username", email: "mail", password: "my password" }
+users = []
 ```
 
 - Ја покрива патеката 1,2 - 4 - 6 - 7 - 15,16,17 - 18 - 20 - 24 - 25

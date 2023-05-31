@@ -55,3 +55,38 @@ user = { username: "username", email: "mail", password: "my password" }
 ```
 
 - Ја покрива патеката 1,2 - 4 - 6 - 7 - 15,16,17 - 18 - 20 - 24 - 25
+
+### Тест случаи според критериумот Multiple Condition
+`if (user==null || user.getPassword()==null || user.getEmail()==null)`
+
+**1. Test case 1: user is null**
+
+```
+user = null
+```
+
+- Ја опфаќа комбинацијата TXX
+
+**2. Test case 2: password is null**
+
+```
+user = { username: "username", email: "email@mail.com", password: null }
+```
+
+- Ја опфаќа комбинацијата FTX
+
+**3. Test case 3: email is null**
+
+```
+user = { username: "username", email: null, password: "password" }
+```
+
+- Ја опфаќа комбинацијата FFT
+
+**4. Test case 4: all needed information is present**
+
+```
+user = { username: "username", email: "email@mail.com", password: "password" }
+```
+
+- Ја опфаќа комбинацијата FFF
